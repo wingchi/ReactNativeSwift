@@ -11,13 +11,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
+  var bridge: RCTBridge!
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
     
     let jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index.ios", fallbackResource: nil)
     
     let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "ReactNativeSwift", initialProperties: nil, launchOptions: launchOptions)
-    rootView?.backgroundColor = UIColor.white
+    rootView?.backgroundColor = UIColor.blue
     
     window = UIWindow(frame: UIScreen.main.bounds)
     let rootViewController = UIViewController()

@@ -443,6 +443,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = THP5EV5EJ9;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
