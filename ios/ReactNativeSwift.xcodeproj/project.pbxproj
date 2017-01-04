@@ -15,6 +15,8 @@
 		00E356F31AD99517003FC87E /* ReactNativeSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeSwiftTests.m */; };
 		0CA025D31E1C0DC600AA5146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA025D21E1C0DC600AA5146 /* AppDelegate.swift */; };
 		0CA025E81E1C640D00AA5146 /* NotificationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA025E71E1C640D00AA5146 /* NotificationConverter.swift */; };
+		0CA025EA1E1D59D400AA5146 /* LocalNotificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA025E91E1D59D400AA5146 /* LocalNotificator.swift */; };
+		0CA025EC1E1D8FF600AA5146 /* LocalNotificatorBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA025EB1E1D8FF600AA5146 /* LocalNotificatorBridge.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -182,6 +184,8 @@
 		0CA025D11E1C0DC600AA5146 /* ReactNativeSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CA025D21E1C0DC600AA5146 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReactNativeSwift/AppDelegate.swift; sourceTree = "<group>"; };
 		0CA025E71E1C640D00AA5146 /* NotificationConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationConverter.swift; path = ReactNativeSwift/NotificationConverter.swift; sourceTree = "<group>"; };
+		0CA025E91E1D59D400AA5146 /* LocalNotificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalNotificator.swift; path = ReactNativeSwift/LocalNotificator.swift; sourceTree = "<group>"; };
+		0CA025EB1E1D8FF600AA5146 /* LocalNotificatorBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalNotificatorBridge.m; path = ReactNativeSwift/LocalNotificatorBridge.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ReactNativeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +315,8 @@
 				0CA025D21E1C0DC600AA5146 /* AppDelegate.swift */,
 				0CA025D11E1C0DC600AA5146 /* ReactNativeSwift-Bridging-Header.h */,
 				0CA025E71E1C640D00AA5146 /* NotificationConverter.swift */,
+				0CA025E91E1D59D400AA5146 /* LocalNotificator.swift */,
+				0CA025EB1E1D8FF600AA5146 /* LocalNotificatorBridge.m */,
 			);
 			name = ReactNativeSwift;
 			sourceTree = "<group>";
@@ -705,6 +711,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA025D31E1C0DC600AA5146 /* AppDelegate.swift in Sources */,
+				0CA025EC1E1D8FF600AA5146 /* LocalNotificatorBridge.m in Sources */,
+				0CA025EA1E1D59D400AA5146 /* LocalNotificator.swift in Sources */,
 				0CA025E81E1C640D00AA5146 /* NotificationConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
