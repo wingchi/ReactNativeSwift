@@ -50,7 +50,10 @@ final class LocalNotitifcator: NSObject {
   }
   
   @objc func scheduleLocalNotification(data: [String: Any], callback: RCTResponseSenderBlock) {
-    let notification = createLocalNotification(data: data)
+    guard let notification = createLocalNotification(data: data) else {
+      callback([])
+      return
+    }
     RCTSharedApplication()?.scheduleLocalNotification(notification)
     callback([NotificationConverter(notification: notification).dictionary])
   }
@@ -65,8 +68,11 @@ final class LocalNotitifcator: NSObject {
     }
   }
   
-  private func createLocalNotification(data: [String: Any]) -> UILocalNotification {
+  private func createLocalNotification(data: [String: Any]) -> UILocalNotification? {
+    guard let fireDate = data["fireDate"] else { return nil }
+    
     let notification = UILocalNotification()
+    notification.fireDate = RCTConvert.nsDate(fireDate)
     notification.soundName = UILocalNotificationDefaultSoundName
     notification.alertBody = data["alertBody"] as? String
     notification.alertAction = data["alertAction"] as? String
@@ -75,10 +81,6 @@ final class LocalNotitifcator: NSObject {
     
     if let hasAction = data["hasAction"] as? Bool {
       notification.hasAction = hasAction
-    }
-    
-    if let fireDate = data["fireDate"] {
-      notification.fireDate = RCTConvert.nsDate(fireDate)
     }
     
     let uuid = UUID().uuidString
