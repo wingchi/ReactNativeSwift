@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index.ios", fallbackResource: nil)
     
     let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "ReactNativeSwift", initialProperties: nil, launchOptions: launchOptions)
-    rootView?.backgroundColor = UIColor.blue
+    bridge = rootView?.bridge
     
     window = UIWindow(frame: UIScreen.main.bounds)
     let rootViewController = UIViewController()

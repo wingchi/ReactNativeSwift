@@ -49,13 +49,18 @@ final class LocalNotitifcator: NSObject {
     callback([permissions])
   }
   
-  @objc func scheduleLocalNotification(data: [String: Any], callback: RCTResponseSenderBlock) {
-    guard let notification = createLocalNotification(data: data) else {
+  @objc func scheduleLocalNotification(data: NSDictionary, callback: RCTResponseSenderBlock) {
+    guard let data = data as? [String: Any],
+      let notification = createLocalNotification(data: data) else {
       callback([])
       return
     }
     RCTSharedApplication()?.scheduleLocalNotification(notification)
     callback([NotificationConverter(notification: notification).dictionary])
+  }
+  
+  @objc static func testMethod(data: NSDictionary?) {
+    print("Test")
   }
   
   @objc func cancelLocalNotification(uuid: String) {

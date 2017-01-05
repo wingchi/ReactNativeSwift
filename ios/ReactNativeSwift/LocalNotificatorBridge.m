@@ -11,8 +11,8 @@
 @interface RCT_EXTERN_MODULE(LocalNotificator, NSObject)
 
 RCT_EXTERN_METHOD(requestPermissions)
-RCT_EXTERN_METHOD(checkPermissions:(RCTResponseSenderBlock)callback)
-RCT_EXTERN_METHOD(scheduleLocalNotification:(NSDictionary *)data callback:(RCTResponseSenderBlock)callback)
-RCT_EXTERN_METHOD(cancelLocalNotification:(NSString *)uuid)
+RCT_EXTERN_METHOD(checkPermissionsWithCallback:(RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(scheduleLocalNotificationWithData:(NSDictionary *)data callback:(RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(cancelLocalNotificationWithUuid:(NSString *)uuid)
 
 @end
